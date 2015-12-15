@@ -25,10 +25,43 @@
 
 }
 
+.enemy-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .enemy-stats {
   border: 1px solid orange;
   position: absolute; /* absolutely positioned with ancestor enemy box */
   bottom: 0px;
   height: 15%;
+  width: 100%;
+}
+
+.player-container {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 10px;
+  height: 25%;
+  /*min-width: 300px;*/
+  width: 80%;
+  max-width: 800px;
+  border: 2px solid teal;
+  left: 0;
+  right: 0;
+}
+
+.player-options {
+  height: 20%;
+  border: 1px solid darkkhaki;
+}
+
+.character-container {
+  position: absolute;
+  bottom: 0;
+  height: 70%;
+  border: 1px solid darkolivegreen;
   width: 100%;
 }
