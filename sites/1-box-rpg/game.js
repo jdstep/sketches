@@ -25,6 +25,7 @@ $(document).ready(function() {
     var enemyData = enemies[name];
     var $enemyName = $('.enemy-name');
     var $enemyHp = $('.enemy-hp');
+    var gold = 100;
 
     $enemyImg.attr('src', enemyData.img);
     $enemyName.html('<h3>' + enemyData.name + '</h3>');
@@ -34,7 +35,6 @@ $(document).ready(function() {
 
   var setupListeners = function() {
     $('.buy-btn').click(function() {
-      console.log('clicked the button');
       if (numPawns <= 5) {
         var attackValue = Math.floor(Math.random() * (5 - 10) + 5);
         addPawn(attackValue);
@@ -46,8 +46,6 @@ $(document).ready(function() {
       var $enemy = $('.enemy-container');
       var $enemyHP = $enemy.find('.enemy-hp');
       var enemyHPValue = $enemyHP.text();
-      console.log(enemyHPValue)
-      console.log('enemy has', $enemyHP.text(), 'health', 'attacking with', data);
       $enemyHP.html('<h2>' + (enemyHPValue - data.attackValue) + '</h2>');
     });
 
@@ -77,12 +75,9 @@ $(document).ready(function() {
     $pawnTemplate.find('.pawn-attack-value').html('<p>' + attackValue + '</p>');
     $pawnTemplate.find('.pawn-optons').html('<button class="pawn-attack-btn">Attack</button>');
     $pawnTemplate.find('.pawn-attack-btn').click(function() {
-      console.log('attacking for', attackValue, 'damage');
       $(document).trigger('attack', [{attackValue: attackValue}]);
 
     });
-
-    console.log($pawnTemplate);
 
     $pawnsContainer.append($pawnTemplate);
 
@@ -92,7 +87,7 @@ $(document).ready(function() {
 
 
 
+
   loadEnemy();
-  addPawn(6);
   setupListeners();
 });
