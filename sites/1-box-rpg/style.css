@@ -1,0 +1,34 @@
+.enemy-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  width: 100%;
+  border: 3px solid purple;
+}
+
+.enemy-box {
+  border: 1px solid black;
+  height: 300px;
+  width: 300px;
+  position: relative; /* must be positioned so enemy stats can be positioned absolute */
+}
+
+.enemy-portrait {
+  height: 60%;
+  width: 60%;
+  border: 3px solid green;
+  margin: 0 auto;
+  position: relative;
+  top: 40px;
+
+}
+
+.enemy-stats {
+  border: 1px solid orange;
+  position: absolute; /* absolutely positioned with ancestor enemy box */
+  bottom: 0px;
+  height: 15%;
+  width: 100%;
+}
