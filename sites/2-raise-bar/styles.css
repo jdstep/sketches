@@ -12,15 +12,33 @@
   height: 100%;
   display: inline-block;
   margin-right: 25px;
+  position: relative;
 }
 
 .hover-box {
   display: inline-block;
   width: 100px;
   height: 100px;
+  background-color: darkorchid;
+  border-radius: 50%;
 }
 
-.bar {
+.hover-box:hover {
+  background-color: pink;
+}
+
+.progress {
   height: 65%;
+  /*background-color: black;*/
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0px;
+  width: 80px;
+  border-radius: 4px;
+  transition: 0.4s linear;
+  transition-property: height;
+  height: 2%;
   background-color: green;
 }
