@@ -1,0 +1,26 @@
+.bars-container {
+  width: 600px;
+  min-width: 300px;
+  /*height: 80%;*/
+  height: 500px;
+  min-height: 400px;
+  margin: 0 auto;
+}
+
+.bar-container {
+  width: 100px;
+  height: 100%;
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.hover-box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.bar {
+  height: 65%;
+  background-color: green;
+}
