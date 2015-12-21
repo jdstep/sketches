@@ -6,3 +6,7 @@
   border-right: 50px solid transparent;
   border-bottom: 100px solid aqua;
 }
+
+.triangle-up:hover {
+  border-bottom-color: purple;
+}
