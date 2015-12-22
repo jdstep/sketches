@@ -1,0 +1,35 @@
+main {
+  /*position: relative;*/
+  background: lightgoldenrodyellow;
+  height: 100vh;
+  width: 100vw;
+}
+
+.circle {
+  position: relative;
+  height: 10em;
+  width: 10em;
+  background-color: darkmagenta;
+  border-radius: 5em;
+  right: 50px;
+}
+
+.go-around {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: go-around;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: normal;
+}
+
+@-webkit-keyframes go-around {
+  25 % {
+    left: 80vw;
+  }
+
+  50% {
+    left: 20vw;
+  }
+}
